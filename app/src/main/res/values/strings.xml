@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">arduinoLED</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="firstLED">Перший світлодіод</string>
+    <string name="connect">Підключитись</string>
+    <string name="secondLED">Другий світлодіод</string>
+    <string name="cantConnectToArduino">Не можу підключитись до Arduino</string>
+</resources>

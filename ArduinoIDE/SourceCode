@@ -1,0 +1,26 @@
+void setup() {
+    //set speed UART
+    Serial.begin(9600);
+
+    //setup pin on output
+    pinMode(2, OUTPUT);
+    pinMode(3, OUTPUT);
+    pinMode(4, OUTPUT);
+    pinMode(5, OUTPUT);
+    pinMode(6, OUTPUT);
+    pinMode(7, OUTPUT);
+}
+
+void loop() {
+    //if get data
+    if (Serial.available() > 0) {
+        //read byte from request
+       byte incomingByte = Serial.read();
+       // may send only string
+       String response = String(incomingByte);
+       // send back getted number for updating btn state
+      Serial.println(response);
+      // set led color
+digitalWrite(incomingByte/10, incomingByte%2);
+    }
+}
